@@ -239,13 +239,19 @@ export default function FaultyTerminal({
   tint = "#ffffff",
   mouseReact = true,
   mouseStrength = 0.2,
-  dpr = Math.min(window.devicePixelRatio || 1, 2),
+  dpr: dprProp,
   pageLoadAnimation = true,
   brightness = 1,
   className,
   style,
   ...rest
 }) {
+  const dpr = useMemo(() => {
+    if (dprProp !== undefined) return dprProp;
+    if (typeof window !== "undefined") return Math.min(window.devicePixelRatio || 1, 2);
+    return 1;
+  }, [dprProp]);
+
   const containerRef = useRef(null);
   const programRef = useRef(null);
   const rendererRef = useRef(null);
