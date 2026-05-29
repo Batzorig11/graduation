@@ -6,6 +6,7 @@ import Image from "next/image";
 import * as Icons from "lucide-react";
 import { ConfettiFireworks } from "@/components/ui/confetti-firework";
 import Logo from "@/components/logo";
+import FaultyTerminal from "@/components/react-bits/FaultyTerminal/FaultyTerminal";
 
 const { slides } = presentationContent;
 
@@ -446,7 +447,6 @@ function ThanksSlide({ slide, isActive }) {
           <ConfettiFireworks>
             <SlideHeader slide={slide} />
           </ConfettiFireworks>
-          <BadgeRow badges={slide.badges} />
         </div>
         <div className="celebration-visual">
           <div className="unlock-card reveal" style={delay(2)}>
@@ -498,6 +498,47 @@ function ComparePicture({ src, alt, placeholderTitle, placeholderText }) {
   );
 }
 
+function TerminalDisplay({ src, alt, placeholderTitle, placeholderText }) {
+  const [hasError, setHasError] = useState(false);
+  const isPlaceholder = !src || src.includes("placeholder") || hasError;
+
+  return (
+    <div className="compare-pic-container w-full!">
+      <div className="screen-toolbar">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="compare-pic-content">
+        <div style={{ width: "100%", height: "400px", position: "relative" }}>
+          <FaultyTerminal
+            scale={1}
+            gridMul={[3, 1]}
+            digitSize={1}
+            timeScale={0.5}
+            pause={false}
+            scanlineIntensity={0.5}
+            glitchAmount={3}
+            flickerAmount={2}
+            noiseAmp={1}
+            chromaticAberration={0}
+            dither={0}
+            curvature={0.1}
+            tint="#A7EF9E"
+            mouseReact
+            mouseStrength={0.5}
+            pageLoadAnimation
+            brightness={0.6}
+          />
+          <div className="absolute w-full h-full flex justify-center font-bold items-center text-6xl top-0 left-0">
+            Тун удахгүй ...
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Kami2Slide({ slide, isActive }) {
   return (
     <section
@@ -513,12 +554,7 @@ function Kami2Slide({ slide, isActive }) {
         </div>
         <div className="mt-6 flex gap-4 items-center">
           <div className="w-full">
-            <ComparePicture
-              src={slide.imageSrc}
-              alt={slide.imageAlt}
-              placeholderTitle={slide.placeholderTitle}
-              placeholderText={slide.placeholderText}
-            />
+            <TerminalDisplay />
           </div>
         </div>
       </div>

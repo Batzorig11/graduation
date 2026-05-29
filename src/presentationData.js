@@ -36,7 +36,7 @@ export const presentationContent = {
       type: "platform",
       eyebrow: "Сургалтын платформ",
       title: "Codingforkids.io платформ",
-      lead: "Олон улсын жишигт нийцсэн сургалтын орчин:",
+      lead: "Платформын давуу талууд:",
       points: [
         {
           text: "Хүүхдийн сонирхлыг татах интерактив тоглоом",
@@ -308,7 +308,7 @@ export const presentationContent = {
       title: "Kami-2 дээр юу сурах вэ?",
       lead: "Суурь мэдлэгээ бэхжүүлээд зогсохгүй, илүү нарийн төвөгтэй код бичиж өөрсдийн анхны програмыг терминал дээр ажиллуулах чадвартай болох болно.",
       badges: ["Жинхэнэ төслүүд", "IDE", "Чөлөөт код бичих"],
-      imageSrc: "/terminal-game.png",
+      imageSrc: "/game.png",
     },
     {
       type: "thanks",
