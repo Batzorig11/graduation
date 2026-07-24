@@ -67,7 +67,7 @@ export const presentationContent = {
       type: "learning",
       eyebrow: "Суралцсан эрдэм",
       title: "Сурагчид юу сурсан бэ?",
-      lead: "2 сар || 16 удаагийн оролт || 8 том сэдэв || 1000+ мөр код.",
+      lead: "16 удаагийн оролт || 8 том сэдэв || 1000+ мөр код.",
       steps: [
         {
           label: "Хувьсагч",
@@ -121,6 +121,18 @@ export const presentationContent = {
         },
       ],
     },
+  {
+      type: "thanks",
+      eyebrow: "Их сорилт",
+      title: "🎮 Одоо бүгдээрээ Kahoot тоглоцгооё!",
+      lead: "Гар утас болон компьютерээ бэлдээрэй! 16 оролтоор сурсан мэдлэгээ сориод шилдэг кодчноо тодруулъя.",
+      badges: ["Kahoot Time", "Блиц сорилт", "Шилдэг Кодчин"],
+      codeLines: [
+        "kahoot.start_game()",
+        "show_pin_code()",
+        "let_the_game_begin()",
+      ],
+    },
     {
       type: "topics",
       eyebrow: "Дадал ба Сэтгэлгээ",
@@ -163,7 +175,7 @@ export const presentationContent = {
       type: "skills",
       eyebrow: "Roadmap: 0-оос Hero руу",
       title: "Сурагчдын ахиц",
-      lead: "2 сарын хугацаанд туулсан зам.",
+      lead: "16 хоногийн хугацаанд туулсан зам.",
       milestones: [
         {
           label: "Эхлэл",
@@ -195,7 +207,7 @@ export const presentationContent = {
       type: "compare",
       eyebrow: "Ахиц дэвшил",
       title: "Эхний ба сүүлийн код",
-      lead: "2 сарын хугацаанд сурагчдын бичсэн кодын хөгжил болон бүтээсэн тоглоом.",
+      lead: "16 хоногийн хугацаанд сурагчдын бичсэн кодын хөгжил болон бүтээсэн тоглоом.",
       first: {
         title: "Эхний хичээлийн код",
         icon: "Code",
